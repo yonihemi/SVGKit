@@ -17,7 +17,13 @@
 	{
 		SVGKitLogVerbose(@"[%@] DEBUG: Generating a UIImage using the current root-object's viewport (may have been overridden by user code): {0,0,%2.3f,%2.3f}", [self class], image.size.width, image.size.height);
 		
-		UIGraphicsBeginImageContextWithOptions( image.size, FALSE, [UIScreen mainScreen].scale );
+#if !TARGET_OS_XR
+		CGFloat scale = [UIScreen mainScreen].scale;
+#else
+		CGFloat scale = 1.0;
+#endif
+		
+		UIGraphicsBeginImageContextWithOptions( image.size, FALSE, scale );
 		CGContextRef context = UIGraphicsGetCurrentContext();
 		
 		[image renderToContext:context antiAliased:shouldAntialias curveFlatnessFactor:multiplyFlatness interpolationQuality:interpolationQuality flipYaxis:FALSE];
