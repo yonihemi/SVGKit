@@ -176,7 +176,7 @@
     
 #if SVGKIT_MAC
     label.contentsScale = [[NSScreen mainScreen] backingScaleFactor];
-#else
+#elif !TARGET_OS_XR
     label.contentsScale = [[UIScreen mainScreen] scale];
 #endif
     
