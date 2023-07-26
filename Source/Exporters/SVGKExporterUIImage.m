@@ -17,7 +17,7 @@
 	{
 		SVGKitLogVerbose(@"[%@] DEBUG: Generating a UIImage using the current root-object's viewport (may have been overridden by user code): {0,0,%2.3f,%2.3f}", [self class], image.size.width, image.size.height);
 		
-#if !TARGET_OS_XR
+#if !TARGET_OS_VISION
 		CGFloat scale = [UIScreen mainScreen].scale;
 #else
 		CGFloat scale = 1.0;

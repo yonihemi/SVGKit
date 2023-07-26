@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3242C36E217CF0CD0013765F /* Blocky.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3242C368217CF0CD0013765F /* Blocky.ttf */; };
-		32AF7BBE217389FD00142396 /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529DADF11C415FF00069B076 /* SVGKit.framework */; };
-		32AF7BC021738A0300142396 /* SVGKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 529DADF11C415FF00069B076 /* SVGKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		32AF7BBE217389FD00142396 /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529DADF11C415FF00069B076 /* SVGKit.framework */; platformFilter = ios; };
+		32AF7BC021738A0300142396 /* SVGKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 529DADF11C415FF00069B076 /* SVGKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		32D3D5EC2176E3FA00ED20D8 /* Mozilla_Firefox_logo_2013.svg in Resources */ = {isa = PBXBuildFile; fileRef = 32D3D5E62176E3FA00ED20D8 /* Mozilla_Firefox_logo_2013.svg */; };
 		32D3D5F12176FA0700ED20D8 /* Mozilla_Firefox_logo_2013.png in Resources */ = {isa = PBXBuildFile; fileRef = 32D3D5F02176FA0700ED20D8 /* Mozilla_Firefox_logo_2013.png */; };
 		32D42245217AED3900CFD064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D42244217AED3900CFD064 /* LaunchScreen.storyboard */; };
@@ -1006,11 +1006,13 @@
 		32AF7BC221738A0300142396 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SVGKitFramework-iOS";
+			platformFilter = ios;
 			targetProxy = 32AF7BC121738A0300142396 /* PBXContainerItemProxy */;
 		};
 		66E785A9171A1208001EF59D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SVGKit-iOS";
+			platformFilter = ios;
 			targetProxy = 66E785A8171A1208001EF59D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1181,11 +1183,17 @@
 				);
 				INFOPLIST_FILE = "SVGKitLibrary/Demo-iOS/Demo-iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "na.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Demo-iOS";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 				VALIDATE_WORKSPACE = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1203,11 +1211,17 @@
 				);
 				INFOPLIST_FILE = "SVGKitLibrary/Demo-iOS/Demo-iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "na.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "Demo-iOS";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 				VALIDATE_WORKSPACE = YES;
 				WRAPPER_EXTENSION = app;
 			};

@@ -64,7 +64,7 @@
         CGFloat scale = MAX(layer.contentsScale, layer.mask.contentsScale);
 #if SVGKIT_MAC
         scale = MAX(scale, [[NSScreen mainScreen] backingScaleFactor]);
-#elif !TARGET_OS_XR
+#elif !TARGET_OS_VISION
         scale = MAX(scale, [[UIScreen mainScreen] scale]);
 #endif
         CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
